@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,600&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,11 +10,16 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: black;
+  background-color: white;
   color: black;
+}
+.name {
+  font-size: 24px;
+  // font-weight: ;
+  // font-style: 'Roboto';
 }
 
 .container {
@@ -62,8 +69,7 @@ a:hover {
 ul {
   list-style: none;
 }
-.strong {
-}
+
 
 img {
   width: 100%;
@@ -187,10 +193,13 @@ header,
 }
 h1{
   color: black;
+  font-weight: 700;
+  line-height: 1.6;
 }
 h6 {
   color: black;
   line-height: 1.7;
+  
 }
 
 .rgba-gradient {
