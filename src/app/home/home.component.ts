@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
   }
  
 
-  @HostListener("window:scroll", [])
-  onWindowScroll() {
+  @HostListener("window:scroll", ['$event'])
+  onWindowScroll(e) {
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     if (number > 5) {
       let element = document.getElementById('navbar');
@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
       element.classList.remove('navbar-inverse');
       console.log('You are 500px from the top to bottom');
     }
-
   }
 }
 // 
