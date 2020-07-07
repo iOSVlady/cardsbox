@@ -1,13 +1,48 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { trigger, state, style, animate, transition, animation } from '@angular/animations';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations:[
+      
+      trigger('box', [
+        state('start', style({
+          transform: 'translateY(100px)',
+          opacity: 0
+        })),
+        state('end', style({
+          transform: 'translateY(0px)',
+          opacity: 1
+        })),
+
+
+        transition('start => end', animate(600))
+        
+        ])
+  ]
 })
 export class HomeComponent implements OnInit {
-
-
+  boxState = 'start';
+  boxState_title = 'start';
+  boxState_text = 'start';
+  ngAfterViewInit() {
+    setTimeout(_ => this.animate());
+    setTimeout(_ => this.animate_title(), 600);
+    setTimeout(_ => this.animate_text(), 1200);
+}
+  animate(){
+    this.boxState = this.boxState === 'end' ? 'start' : 'end'
+  }
+  animate_title(){
+    this.boxState_text = this.boxState_text === 'end' ? 'start' : 'end'
+  }
+  animate_text(){
+    this.boxState_title = this.boxState_title === 'end' ? 'start' : 'end'
+  }
+  
   constructor(){}
  
   ngOnInit(): void {
