@@ -72,9 +72,16 @@ ul {
 
 
 img {
+  
+}
+.top-img{
   width: 100%;
   margin: 50px;
   padding-top: 30px;
+}
+.general-img{
+ width: 50%;
+ 
 }
 @media (max-width: 740px){
   img{
@@ -204,6 +211,13 @@ h6 {
   line-height: 1.7;
   
 }
+.bg-dark{
+  background-image: url("https://i.ibb.co/kh9Y1TS/Macket-Phone.png");
+  background-repeat: no-repeat; 
+  background-size: 100% 100%;
+  background-position: center;
+  background-size: cover;
+}
 
 .rgba-gradient {
   // background: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)  100% );
@@ -294,7 +308,7 @@ h6 {
   margin: 0px;
   padding: 0px;
 }
-.col{
+.col-text{
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   margin: 10px;
