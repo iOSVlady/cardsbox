@@ -4,27 +4,27 @@
   <!-- Main navigation -->
   <header>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar"  id="navbar" >
+      <div class="container backgrn"  [@backgrn]="background" >
         <a class="navbar-brand" href="#">
-          <strong class="name">Cardsbox</strong>
+          <strong class="name navbar-myitems navigation" [@navigation]="navbar">Cardsbox</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
           aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto ">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+              <a class="nav-link navigation" [@navigation]="navbar" href="#">Про нас
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link navigation" [@navigation]="navbar" href="#">Інструкція</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+              <a class="nav-link navigation" [@navigation]="navbar"href="#">Поділитися</a>
             </li>
           </ul>
           <form class="form-inline">
@@ -46,7 +46,7 @@
           <!--Grid column-->
           <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5">
             <div class="wrapper">
-            <h1 class="h1-responsive font-weight-bold mt-sm-5 box" [@box]="boxState_title">Make purchases with our app </h1>
+            <h1 class="h1-responsive font-weight-bold mt-sm-5 box" [@box]="boxState_title">Швидке вивчення за допомогою карток </h1>
           </div>
             <hr class="hr-light box" [@box]="boxState_title">
             <h6 class="mb-4 box" [@box]="boxState_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga
@@ -55,8 +55,8 @@
               iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
               dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
               iste.</h6>
-            <a class="btn btn-white" #box (click)="animate()">Download</a>
-            <a class="btn btn-outline-white">Learn more</a>
+            <a class="btn btn-white wow bounceInUp" data-wow-duration="2s" (click)="animate()">Придбати</a>
+            <a class="btn btn-outline-white">Дізнатися більше</a>
           </div>
           <!--Grid column-->
           <!--Grid column-->
@@ -70,13 +70,12 @@
       <!-- Content -->
     </div>
     <!-- Mask & flexbox options-->
-
     <!-- Full Page Intro -->
   </header>
   <!-- Main navigation -->
   <!--Main Layout-->
-  <main>
-    <div class="view"
+  <main class="">
+    <div class="mask align-items-center screen"
      style="background-color: black; background-repeat: no-repeat; background-size: cover; background-position: center center;">
       <div class="container">
         <!--Grid row-->
@@ -111,7 +110,10 @@
     </div>
   </main>
   <!--Main Layout-->
-  <div class="view" style="background-image: url('https://images.unsplash.com/photo-1493934558415-9d19f0b2b4d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1036&q=80'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <div class="mask align-items-center screen" style="
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000000, #434343); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000000, #434343); /* W3C,  background-position: center center;">
     
     <div class="container">
     <div class="row py-5">
@@ -122,9 +124,7 @@
 
     </div>
     </div>
-    
   </div>
 </div>
 </body>
-
 </html>

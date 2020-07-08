@@ -24,8 +24,9 @@ body {
 
 .container {
 
-  max-width: 1250px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0 0;
+  padding: 0 45.5px;
   padding-top: 0rem;
   
 }
@@ -195,11 +196,17 @@ header,
 
 .navbar:not(.top-nav-collapse) {
   background: rgba(255, 255, 255, 1) !important;
-  
+  color: black;
+}
+.navbar-myitems{
+  color: black;
+}
+.navbar-myitems-inverse{
+  color: white;
 }
 .navbar-inverse:not(.top-nav-collapse){
-  border-bottom: solid;
-  border-bottom-color: black;
+  background: rgb(0, 0, 0, 1) !important;
+  color: white;
   //border:rgba(255, 255, 255, 1) !important;
 }
 @media (max-width: 991px) {
