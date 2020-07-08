@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cardsbox';
+
+
+  constructor(){
+  
+    }
+ 
+  ngOnInit(): void {
+  
+    
+  }
+  ngOnDestroy() {
+    // unsubscribe (if necessary) to WOW observable to prevent memory leaks
+  }
+  
 }

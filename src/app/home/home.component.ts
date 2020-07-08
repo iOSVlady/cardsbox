@@ -1,5 +1,12 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
+import { NgwWowService } from 'ngx-wow';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { filter } from "rxjs/operators";
+import { Subscription }   from 'rxjs';
+
+
+
 
 
 @Component({
@@ -28,6 +35,7 @@ export class HomeComponent implements OnInit {
   boxState = 'start';
   boxState_title = 'start';
   boxState_text = 'start';
+  router: any;
   ngAfterViewInit() {
     setTimeout(_ => this.animate());
     setTimeout(_ => this.animate_title(), 600);
@@ -43,13 +51,20 @@ export class HomeComponent implements OnInit {
     this.boxState_title = this.boxState_title === 'end' ? 'start' : 'end'
   }
   
-  constructor(){}
+  // private wowSubscription: Subscription;
+ constructor(){
+ 
+    // this.router.events.filter(event => event instanceof NavigationEnd).subscribe(event => {
+
+    // // this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
+    //   this.wowService.init(); 
+    // });
+    }
  
   ngOnInit(): void {
-
+    // this.wowService.init();
+    
   }
- 
-
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(e) {
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
