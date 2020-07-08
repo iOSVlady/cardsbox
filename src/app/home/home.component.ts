@@ -4,7 +4,7 @@ import { NgwWowService } from 'ngx-wow';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { filter } from "rxjs/operators";
 import { Subscription }   from 'rxjs';
-
+import * as anime from 'animejs';
 
 
 
@@ -31,6 +31,7 @@ import { Subscription }   from 'rxjs';
         ])
   ]
 })
+
 export class HomeComponent implements OnInit {
   boxState = 'start';
   boxState_title = 'start';
@@ -50,6 +51,7 @@ export class HomeComponent implements OnInit {
   animate_text(){
     this.boxState_title = this.boxState_title === 'end' ? 'start' : 'end'
   }
+ 
   
   // private wowSubscription: Subscription;
  constructor(){
