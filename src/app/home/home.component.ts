@@ -1,10 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
-import { NgwWowService } from 'ngx-wow';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
-import { filter } from "rxjs/operators";
-import { Subscription }   from 'rxjs';
-import * as anime from 'animejs';
+
 
 
 
