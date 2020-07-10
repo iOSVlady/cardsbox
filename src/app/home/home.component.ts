@@ -20,11 +20,8 @@ import { async } from 'rxjs/internal/scheduler/async';
           transform: 'translateY(0px)',
           opacity: 1
         })),
-
-
         transition('start => end', animate(600))
-        
-        ]),
+      ]),
       trigger('navigation', [
         state('navbar-white', style({
           color:'black' 
@@ -32,27 +29,38 @@ import { async } from 'rxjs/internal/scheduler/async';
         state('navbar-black', style({
           color:'white' 
         }))
-      
       ]),
       trigger('backgrn', [
         state('bwhite', style({
           background:'white' 
         })),
         state('bblack', style({
-          background:'black', 
+          background:'black' 
         })),
         transition('bwhite => bblack', animate(300)),
         transition('bblack => bwhite', animate(300))
-      ])
+      ]),
+      trigger('background', [ 
+        state('back-white', style({
+          background: 'white'
+        })),
+        state('back-black', style({
+          background: 'black'
+        })),
+        transition('back-white => back-black', animate(300)),
+        transition('back-black => back-white', animate(300))
+       ])
   ]
 })
 
 export class HomeComponent implements OnInit {
-  navbar = 'navbar-white'
-  background = 'bwhite'
+  navbar = 'navbar-white';
+  background = 'bwhite';
   boxState = 'start';
   boxState_title = 'start';
   boxState_text = 'start';
+  background_page = 'back-white';
+
 
 
   ngAfterViewInit() {
@@ -76,6 +84,10 @@ export class HomeComponent implements OnInit {
   animate_background(){
     this.background = this.background == 'bwhite' ? 'bblack' : 'bwhite'
   }
+  animate_background_page(){
+    this.background_page = this.background_page == 'back-white' ? 'back-black' : 'back-white'
+
+  }
 
  
   
@@ -96,19 +108,22 @@ export class HomeComponent implements OnInit {
   onWindowScroll(e) {
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     if (number > 5) {
-      let element = document.getElementById('navbar');
-      console.log('You are 100px from the top to bottom');
       if(this.navbar == "navbar-white"){
           this.animate_background();
           this.animate_navbar();        }
       
     } else {
-      let element = document.getElementById('navbar');
       if(this.navbar == "navbar-black"){
       this.animate_navbar();
       this.animate_background();
       }
       console.log('You are 500px from the top to bottom');
+    }
+
+    if(number > 400 && this.background_page == "back-white"){
+      this.animate_background_page();
+    }else if  (number <= 400 && this.background_page == "back-black"){
+      this.animate_background_page();
     }
   }
   

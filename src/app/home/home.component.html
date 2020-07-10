@@ -5,9 +5,9 @@
   <header>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar"  id="navbar" >
-      <div class="container backgrn"  [@backgrn]="background" >
+      <div class="container"  [@backgrn]="background" >
         <a class="navbar-brand" href="#">
-          <strong class="name navbar-myitems navigation" [@navigation]="navbar">Cardsbox</strong>
+          <strong class="name navbar-myitems" [@navigation]="navbar">Cardsbox</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
           aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,15 +16,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
           <ul class="navbar-nav mr-auto ">
             <li class="nav-item active">
-              <a class="nav-link navigation" [@navigation]="navbar" href="#">Про нас
+              <a class="nav-link" [@navigation]="navbar" href="#">Про нас
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navigation" [@navigation]="navbar" href="#">Інструкція</a>
+              <a class="nav-link" [@navigation]="navbar" href="#">Інструкція</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navigation" [@navigation]="navbar"href="#">Поділитися</a>
+              <a class="nav-link" [@navigation]="navbar"href="#">Поділитися</a>
             </li>
           </ul>
           <form class="form-inline">
@@ -48,8 +48,8 @@
             <div class="wrapper">
             <h1 class="h1-responsive font-weight-bold mt-sm-5 box" [@box]="boxState_title">Швидке вивчення за допомогою карток </h1>
           </div>
-            <hr class="hr-light box" [@box]="boxState_title">
-            <h6 class="mb-4 box" [@box]="boxState_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga
+            <hr class="hr-light" [@box]="boxState_title">
+            <h6 class="mb-4" [@box]="boxState_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga
               nesciunt
               dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
               iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
@@ -74,9 +74,9 @@
   </header>
   <!-- Main navigation -->
   <!--Main Layout-->
-  <main class="">
-    <div class="mask align-items-center screen"
-     style="background-color: black; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <main class="first-mypage">
+    <div class="mask align-items-center screen" [@background]="background_page"
+     style="background-color: white; background-repeat: no-repeat; background-size: cover; background-position: center center;">
       <div class="container">
         <!--Grid row-->
         <div class="row py-5 ">
