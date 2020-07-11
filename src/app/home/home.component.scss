@@ -201,14 +201,8 @@ header,
 .navbar-myitems{
   color: black;
 }
-.navbar-myitems-inverse{
-  color: white;
-}
-.navbar-inverse:not(.top-nav-collapse){
-  background: rgb(0, 0, 0, 1) !important;
-  color: white;
+
   //border:rgba(255, 255, 255, 1) !important;
-}
 @media (max-width: 991px) {
   .navbar:not(.top-nav-collapse) {
     background: white !important;
