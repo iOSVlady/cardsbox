@@ -60,6 +60,7 @@ export class HomeComponent implements OnInit {
   boxState_title = 'start';
   boxState_text = 'start';
   background_page = 'back-white';
+  route: any;
 
 
 
@@ -91,7 +92,7 @@ export class HomeComponent implements OnInit {
 
  
   
-
+post:any
  
   constructor(){
     // this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
@@ -101,7 +102,6 @@ export class HomeComponent implements OnInit {
     // });
   }
   ngOnInit(): void {
-  
     
   }
   @HostListener("window:scroll", ['$event'])

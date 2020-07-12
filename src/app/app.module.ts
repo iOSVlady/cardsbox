@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgwWowModule } from 'ngx-wow';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -17,8 +18,8 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NgwWowModule
-    
+    NgwWowModule,
+    AppRoutingModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

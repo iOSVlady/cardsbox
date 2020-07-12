@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { interval, Subscription } from 'rxjs';
+import {PreloadAllModules} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +10,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'cardsbox';
 
-  showSpinner: boolean = true;
 
   constructor(){
-  
+   
     }
  
+    stop(){
+      // setTimeout(() => this.sub.unsubscribe(), 3000)
+      
+    }
   ngOnInit(): void {
-  setTimeout(() => this.showSpinner = false, 3000);
-    
+  
   }
   ngOnDestroy() {
     // unsubscribe (if necessary) to WOW observable to prevent memory leaks

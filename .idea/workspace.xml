@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f60078c-87f4-4033-86eb-bc0a54048293" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
     </list>
     <list id="5dc78ca2-74df-4ad4-81d9-53279207d78c" name="Revert &quot;initial commit&quot;" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,6 +100,7 @@
       <workItem from="1593724039886" duration="170000" />
       <workItem from="1593980159315" duration="166000" />
       <workItem from="1593981729040" duration="1117000" />
+      <workItem from="1594585828527" duration="177000" />
     </task>
     <servers />
   </component>
@@ -126,22 +129,26 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1593982247691" />
-    <state width="1513" height="224" key="GridCell.Tab.0.bottom" timestamp="1593723975545">
+    <state width="1513" height="224" key="GridCell.Tab.0.bottom" timestamp="1594586004437">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1513" height="224" key="GridCell.Tab.0.bottom/0.0.1536.864/266.-768.1360.768@0.0.1536.864" timestamp="1593723975545" />
-    <state width="1513" height="224" key="GridCell.Tab.0.center" timestamp="1593723975545">
+    <state width="1513" height="224" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1594586004437" />
+    <state width="1513" height="224" key="GridCell.Tab.0.center" timestamp="1594586004436">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1513" height="224" key="GridCell.Tab.0.center/0.0.1536.864/266.-768.1360.768@0.0.1536.864" timestamp="1593723975545" />
-    <state width="1513" height="224" key="GridCell.Tab.0.left" timestamp="1593723975545">
+    <state width="1513" height="224" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1594586004436" />
+    <state width="1513" height="224" key="GridCell.Tab.0.left" timestamp="1594586004436">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1513" height="224" key="GridCell.Tab.0.left/0.0.1536.864/266.-768.1360.768@0.0.1536.864" timestamp="1593723975545" />
-    <state width="1513" height="224" key="GridCell.Tab.0.right" timestamp="1593723975545">
+    <state width="1513" height="224" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1594586004436" />
+    <state width="1513" height="224" key="GridCell.Tab.0.right" timestamp="1594586004437">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1513" height="224" key="GridCell.Tab.0.right/0.0.1536.864/266.-768.1360.768@0.0.1536.864" timestamp="1593723975545" />
+    <state width="1513" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1594586004437" />
     <state x="618" y="346" key="VCS.ChangelistChooser" timestamp="1593981769552">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
