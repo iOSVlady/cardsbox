@@ -8,13 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'cardsbox';
 
+  showSpinner: boolean = true;
 
   constructor(){
   
     }
  
   ngOnInit(): void {
-  
+  setTimeout(() => this.showSpinner = false, 3000);
     
   }
   ngOnDestroy() {
