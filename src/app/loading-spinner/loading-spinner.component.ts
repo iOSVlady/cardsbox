@@ -12,7 +12,7 @@ export class LoadingSpinnerComponent implements OnInit {
   loader: Array<any[]>;
   showSpinner: boolean = true;
   constructor(public router: Router) {  
-    const intervalStream$ = interval(1000)
+    const intervalStream$ = interval(3000)
     this.sub = intervalStream$
     .subscribe(() => {
       this.showSpinner = false

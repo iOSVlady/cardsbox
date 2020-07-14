@@ -10,8 +10,10 @@ const routes: Routes = [{
 },    
 {
   path: 'home',
-  component: HomeComponent
-}];
+  loadChildren: () => import('./home/home.module')
+    .then(mod => mod.HomeModule)
+},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
