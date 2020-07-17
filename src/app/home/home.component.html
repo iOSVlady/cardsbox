@@ -38,7 +38,7 @@
     <!-- Full Page Intro -->
 
     <!-- Mask & flexbox options-->
-    <div class="mask rgba-gradient align-items-center screen">
+    <div class="mask align-items-center screen container"  [@background]="background_page">
       <!-- Content -->
       <div class="container">
         <!--Grid row-->
@@ -74,9 +74,9 @@
   </header>
   <!-- Main navigation -->
   <!--Main Layout-->
-  <main class="first-mypage">
-    <div class="mask align-items-center screen" [@background]="background_page"
-     style="background-color: white; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <div class="first-mypage" [@background]="background_page">
+    <div class="mask align-items-center screen"
+     style=" background-repeat: no-repeat; background-size: cover; background-position: center center;">
       <div class="container">
         <!--Grid row-->
         <div class="row py-5 ">
@@ -108,17 +108,14 @@
         <!--Grid row-->
       </div>
     </div>
-  </main>
+  </div>
   <!--Main Layout-->
-  <div class="mask align-items-center screen" style="
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #000000, #434343); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #000000, #434343); /* W3C,  background-position: center center;">
+  <div class="mask align-items-center screen" [@background]="background_page">
     
-    <div class="container">
+    <div class="container" >
     <div class="row py-5">
       <div class="col">
-      <img src="https://i.ibb.co/0jgL47j/Macket-Phone.png" alt="" class="general-img">
+      <img src="https://i.ibb.co/n7wQsB8/001.png" alt="" class="general-img">
     </div>
     <div class="col">
 

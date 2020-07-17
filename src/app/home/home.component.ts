@@ -47,8 +47,13 @@ import { async } from 'rxjs/internal/scheduler/async';
         state('back-black', style({
           background: 'black'
         })),
-        transition('back-white => back-black', animate(300)),
-        transition('back-black => back-white', animate(300))
+        state('back-material', style({
+          background: '#c4cccd'
+        })),
+        transition('back-white => back-black', animate(200)),
+        transition('back-black => back-white', animate(200)),
+        transition('back-black => back-material', animate(200)),
+        transition('back-material => back-black', animate(200))
        ])
   ]
 })
@@ -60,6 +65,7 @@ export class HomeComponent implements OnInit {
   boxState_title = 'start';
   boxState_text = 'start';
   background_page = 'back-white';
+  background_page2 = 'back-black';
   route: any;
 
 
@@ -87,7 +93,9 @@ export class HomeComponent implements OnInit {
   }
   animate_background_page(){
     this.background_page = this.background_page == 'back-white' ? 'back-black' : 'back-white'
-
+  }
+  animate_background_page2(){
+    this.background_page = this.background_page == 'back-black' ? 'back-material' : 'back-black'
   }
 
  
@@ -120,10 +128,16 @@ post:any
       console.log('You are 500px from the top to bottom');
     }
 
-    if(number > 400 && this.background_page == "back-white"){
+    if(number > 600 && this.background_page == "back-white"){
       this.animate_background_page();
-    }else if  (number <= 400 && this.background_page == "back-black"){
+    }else if  (number <= 600 && this.background_page == "back-black"){
       this.animate_background_page();
+    }
+    else if(number > 1200 && this.background_page == "back-black"){
+      this.animate_background_page2();
+    }
+    else if(number <= 1200 && this.background_page == "back-material"){
+      this.animate_background_page2();
     }
   }
   
