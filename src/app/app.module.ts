@@ -11,6 +11,9 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 
 
+export function playerFactory() {
+  return player;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,8 @@ import player from 'lottie-web';
     BrowserModule,
     BrowserAnimationsModule,
     NgwWowModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LottieModule.forRoot({ player: playerFactory })
       
   ],
   providers: [],

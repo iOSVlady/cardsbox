@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { Router, RouterLink } from '@angular/router';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-loading-spinner',
@@ -18,6 +20,14 @@ export class LoadingSpinnerComponent implements OnInit {
       this.showSpinner = false
       this.router.navigate(['home'])
     })}
+
+    options: AnimationOptions = {
+      path: '/assets/SmartPhone.json',
+    };
+  
+    animationCreated(animationItem: AnimationItem): void {
+      console.log(animationItem);
+    }
 
   ngOnInit(): void {    
   }

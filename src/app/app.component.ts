@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
-import {PreloadAllModules} from '@angular/router';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
+
 
 @Component({
   selector: 'app-root',
@@ -8,22 +9,12 @@ import {PreloadAllModules} from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cardsbox';
+  options: AnimationOptions = {
+    path: '/assets/data.json',
+  };
 
-
-  constructor(){
-   
-    }
- 
-    stop(){
-      // setTimeout(() => this.sub.unsubscribe(), 3000)
-      
-    }
-  ngOnInit(): void {
-  
-  }
-  ngOnDestroy() {
-    // unsubscribe (if necessary) to WOW observable to prevent memory leaks
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
   }
   
 }
