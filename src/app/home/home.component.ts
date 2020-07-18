@@ -2,6 +2,8 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 import { WOW } from 'wowjs/dist/wow.min';
 import { async } from 'rxjs/internal/scheduler/async';
+import { AnimationOptions } from 'ngx-lottie';
+import { AnimationItem } from 'lottie-web';
 
 
 
@@ -59,6 +61,8 @@ import { async } from 'rxjs/internal/scheduler/async';
 })
 
 export class HomeComponent implements OnInit {
+
+  
   navbar = 'navbar-white';
   background = 'bwhite';
   boxState = 'start';
@@ -97,21 +101,15 @@ export class HomeComponent implements OnInit {
   animate_background_page2(){
     this.background_page = this.background_page == 'back-black' ? 'back-material' : 'back-black'
   }
+  lottieConfig: Object;
 
- 
-  
-post:any
- 
   constructor(){
-    // this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
-    //   // Reload WoW animations when done navigating to page,
-    //   // but you are free to call it whenever/wherever you like
-    //   this.wowService.init(); 
-    // });
+  
   }
   ngOnInit(): void {
     
   }
+  
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(e) {
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -138,8 +136,16 @@ post:any
     }
     else if(number <= 1200 && this.background_page == "back-material"){
       this.animate_background_page2();
+
     }
+   
   }
-  
+  options: AnimationOptions = {
+    path: '/assets/data.json',
+  };
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
+  }
 }
+
 // 

@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgwWowModule } from 'ngx-wow';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
 
 @NgModule({
@@ -18,9 +20,15 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     NgwWowModule,
-    AppRoutingModule    
+    AppRoutingModule
+      
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
+
 export class AppModule { }
+
+
