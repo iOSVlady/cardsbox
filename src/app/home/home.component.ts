@@ -1,9 +1,14 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 import { WOW } from 'wowjs/dist/wow.min';
 import { async } from 'rxjs/internal/scheduler/async';
 import { AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'lottie-web';
+import { NgwWowService } from 'ngx-wow';
+import { Router, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
 
 
 
@@ -48,6 +53,7 @@ import { AnimationItem } from 'lottie-web';
         })),
         state('back-black', style({
           background: 'black'
+
         })),
         state('back-material', style({
           background: '#c4cccd'
@@ -60,7 +66,31 @@ import { AnimationItem } from 'lottie-web';
   ]
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
+  private wowSubscription: Subscription;
+ 
+  constructor(private router: Router, private wowService: NgwWowService){
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
+      // Reload WoW animations when done navigating to page,
+      // but you are free to call it whenever/wherever you like
+      this.wowService.init(); 
+    });
+  
+  }
+ 
+  ngOnInit() {
+    // you can subscribe to WOW observable to react when an element is revealed
+    this.wowSubscription = this.wowService.itemRevealed$.subscribe(
+      (item:HTMLElement) => {
+        // do whatever you want with revealed element
+      });
+  }
+ 
+  ngOnDestroy() {
+    // unsubscribe (if necessary) to WOW observable to prevent memory leaks
+    this.wowSubscription.unsubscribe();
+  }
+
 
   
   navbar = 'navbar-white';
@@ -103,12 +133,6 @@ export class HomeComponent implements OnInit {
   }
   lottieConfig: Object;
 
-  constructor(){
-  
-  }
-  ngOnInit(): void {
-    
-  }
   
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(e) {
@@ -142,6 +166,12 @@ export class HomeComponent implements OnInit {
   }
   options: AnimationOptions = {
     path: '/assets/data.json',
+  };
+  cards: AnimationOptions = {
+    path: '/assets/card.json'
+  };
+  backgrounds: AnimationOptions = {
+    path: '/assets/background2.json'
   };
   animationCreated(animationItem: AnimationItem): void {
     console.log(animationItem);

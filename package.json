@@ -29,6 +29,7 @@
     "ngx-wow": "^2.0.1",
     "popper.js": "^1.16.1",
     "rxjs": "^6.5.5",
+    "rxjs-compat": "^6.6.0",
     "scrollmagic": "^2.0.7",
     "tslib": "^2.0.0",
     "wowjs": "^1.1.3",

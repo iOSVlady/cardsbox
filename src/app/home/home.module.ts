@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { NgwWowModule } from 'ngx-wow';
 
 export function playerFactory() {
   return player;
@@ -12,7 +13,8 @@ export function playerFactory() {
   imports: [
     CommonModule,
     HomeRoutingModule,
-    LottieModule.forRoot({ player: playerFactory })
+    LottieModule.forRoot({ player: playerFactory }),
+    NgwWowModule
   ],
   exports:[
     HomeComponent
