@@ -31,28 +31,28 @@ import { filter } from 'rxjs/operators';
       ]),
       trigger('navigation', [
         state('navbar-white', style({
-          color:'black' 
+          color:'#272424' 
         })),
         state('navbar-black', style({
-          color:'white' 
+          color:'#F1F3F2' 
         }))
       ]),
       trigger('backgrn', [
         state('bwhite', style({
-          background:'white' 
+          background:'#F1F3F2' 
         })),
         state('bblack', style({
-          background:'black' 
+          background:'#272424' 
         })),
         transition('bwhite => bblack', animate(300)),
         transition('bblack => bwhite', animate(300))
       ]),
       trigger('background', [ 
         state('back-white', style({
-          background: 'white'
+          background: '#F1F3F2'
         })),
         state('back-black', style({
-          background: 'black'
+          background: '#272424'
 
         })),
         state('back-material', style({
