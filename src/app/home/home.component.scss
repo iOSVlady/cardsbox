@@ -3,245 +3,255 @@ $background-black: #272424;
 $background-matte: #585A56;
 $background-lite: #81A3A7;
 $background-lite2: #C2D3DA;
-
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: $background-black;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $background-black;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 1rem;
-  line-height: 1.6;
-  background: $background-white;
-  color: $background-black;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: $background-white;
+    color: $background-black;
 }
+
 .name {
-  font-size: 24px;
-  font-weight: bold ;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .container {
-  max-width: 100%;
-  margin: 0 0;
-  padding: 0 45.5px;
-  padding-top: 0rem;
+    max-width: 100%;
+    margin: 0 0;
+    padding: 0 45.5px;
+    padding-top: 0rem;
 }
+
 .screen {
-  height: 100vh;
-  display: flex;
+    height: 100vh;
+    display: flex;
 }
 
-.navbar-collapse{
-  margin: 20px;
-}
-@media (max-width: 740px){
-.container{
-  max-width: 740px;
-  margin: auto auto;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
+.navbar-collapse {
+    margin: 20px;
 }
 
-@media (max-width: 991px){
-  .container{
-    max-width: 740px;
-    margin: auto auto;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  }
-@media (max-width: 740px){
-  .col-md-6{
-    margin-top: 11rem;
-  }
-  
+@media (max-width: 740px) {
+    .container {
+        max-width: 740px;
+        margin: auto auto;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
 }
 
+@media (max-width: 991px) {
+    .container {
+        max-width: 740px;
+        margin: auto auto;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 740px) {
+    .col-md-6 {
+        margin-top: 11rem;
+    }
+}
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-  color: $background-black;
+    color: $background-black;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
-
-.top-img{
-  width: 100%;
-  margin: 30px;
-  margin-top: 0;
-
-  
-  // padding-top: 30px;
+.top-img {
+    width: 100%;
+    margin: 30px;
+    margin-top: 0;
+    // padding-top: 30px;
 }
-.general-img{
- width: 50%;
- display: block;
- margin-left: auto;
- margin-right: auto;
+
+.general-img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-@media (max-width: 740px){
-  img{
-    margin: 0px;
-  }
+
+@media (max-width: 740px) {
+    img {
+        margin: 0px;
+    }
 }
 
 .bttn {
-  display: inline-block;
-  background: $background-lite;
-  color: $background-white;
-  border-radius: 5px;
-  padding: 0.4rem 1.3rem;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-right: 0.5rem;
-  transition: opacity 0.2s ease-in;
-  outline: none;
+    display: inline-block;
+    background: $background-lite;
+    color: $background-white;
+    border-radius: 5px;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: opacity 0.2s ease-in;
+    outline: none;
 }
 
 .bttn:hover {
-  background-color: $background-matte;
-  color: $background-white;
+    background-color: $background-matte;
+    color: $background-white;
 }
+
 .btn2 {
-  display: inline-block;
-  background: $background-black;
-  color: $background-white;
-  border-radius: 5px;
-  padding: 0.4rem 1.3rem;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-right: 0.5rem;
-  transition: opacity 0.2s ease-in;
-  outline: none;
-  
+    display: inline-block;
+    background: $background-black;
+    color: $background-white;
+    border-radius: 5px;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: opacity 0.2s ease-in;
+    outline: none;
 }
 
 .btn2:hover {
-  background-color: $background-matte;
-  color: $background-white;
+    background-color: $background-matte;
+    color: $background-white;
 }
 
 .form-control {
-  display: block;
-  margin-top: 0.3rem;
+    display: block;
+    margin-top: 0.3rem;
 }
 
 .card {
-  padding: 1rem;
-  border: $background-black 1px dotted;
-  margin: 0.7rem 0;
+    padding: 1rem;
+    border: $background-black 1px dotted;
+    margin: 0.7rem 0;
 }
 
 input,
 select,
 textarea {
-  display: block;
-  width: 100%;
-  padding: 0.4rem;
-  font-size: 1.2rem;
-  border: 1px solid $background-black;
-  margin: 0rem 0;
+    display: block;
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    border: 1px solid $background-black;
+    margin: 0rem 0;
 }
 
 hr {
-  margin: .5rem 0;
+    margin: .5rem 0;
 }
 
-.main{
- 
-  background-image:url('https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
-  background-repeat: no-repeat; 
-  background-size: 100% 100%;
-  background-position: center;
-  background-size: cover;
-  
+.main {
+    background-image: url('https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-size: cover;
 }
-
 
 @media (max-width: 740px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 930px;
-  }
-}
-@media (min-width: 800px) and (max-width: 850px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 600px;
-  }
+    html,
+    body,
+    header,
+    .view {
+        height: 930px;
+    }
 }
 
+@media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 600px;
+    }
+}
 
 .top-nav-collapse {
-  background-color: $background-white !important;
-
+    background-color: $background-white !important;
 }
-.navbar-dark .navbar-nav .nav-link{
-  color: $background-black;
+
+.navbar-dark .navbar-nav .nav-link {
+    color: $background-black;
 }
 
 .navbar:not(.top-nav-collapse) {
-  background: $background-white !important;
-  color: $background-black;
-}
-.navbar-myitems{
-  color: $background-black;
+    background: $background-white !important;
+    color: $background-black;
 }
 
-  //border:rgba(255, 255, 255, 1) !important;
-@media (max-width: 991px) {
-  .navbar:not(.top-nav-collapse) {
-    background: $background-white !important;
-    padding:  0px 60px  0px  60px ;
-  }
+.navbar-myitems {
+    color: $background-black;
 }
-h1{
-  background-color: $background-black;
-  
-  color: $background-white;
-  display: inline;
-  font-weight: 700;
-  line-height: 1.6;
+
+//border:rgba(255, 255, 255, 1) !important;
+@media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+        background: $background-white !important;
+        padding: 0px 60px 0px 60px;
+    }
+}
+
+h1 {
+    background-color: $background-black;
+    color: $background-white;
+    display: inline;
+    font-weight: 700;
+    line-height: 1.6;
 }
 
 
 /* The typing effect */
+
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
 }
 
+
 /* The typewriter cursor effect */
+
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
 }
+
 h6 {
-  color: #454545;
-  line-height: 1.7;
-  
+    color: #454545;
+    line-height: 1.7;
 }
-.bg-dark{
-  background-image: url("https://i.ibb.co/kh9Y1TS/Macket-Phone.png");
-  background-repeat: no-repeat; 
-  background-size: 100% 100%;
-  background-position: center;
-  background-size: cover;
+
+.bg-dark {
+    background-image: url("https://i.ibb.co/kh9Y1TS/Macket-Phone.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 // .rgba-gradient {
@@ -249,62 +259,67 @@ h6 {
 // //  backdrop-filter:blur(5px) ;
 // }
 // Search
-
-
-
-.main{
-  background-color: $background-white;
-  position: relative;
-}
-.main-text{
-  color: $background-black;
-}
-.anki{
-  width: 30%;
-  margin: 10% 0% 10% 35%;
+.main {
+    background-color: $background-white;
+    position: relative;
 }
 
-.col-text{
- 
-  border-radius: 10px;
-  margin: 30px;
-  padding: 30px;
-  text-align: center;
-  
+.main-text {
+    color: $background-black;
 }
+
+.anki {
+    width: 30%;
+    margin: 10% 0% 10% 35%;
+}
+
+.col-text {
+    border-radius: 10px;
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+}
+
 .image {
- padding-top: 60px;
+    padding-top: 60px;
 }
-.text-anki{
-  margin: 10px;
-  color: $background-white;
+
+.text-anki {
+    margin: 10px;
+    color: $background-white;
 }
+
 /////////////////////////2 Pages///////////////////////////////
-.animation-picture{
-  padding: 150px;
+.animation-picture {
+    padding: 150px;
 }
-.picture{
-  margin: auto;
-  padding: 20px;
-  width: 200px;
-  border-radius: 300px;
+
+.picture {
+    margin: auto;
+    padding: 20px;
+    width: 200px;
+    border-radius: 300px;
 }
 
 .backgroundlottie {
-	background: linear-gradient(-45deg, $background-matte, $background-lite );
-	background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
-
+    background: linear-gradient(-45deg, $background-matte, $background-lite);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.text-3 {
+    padding-top: 140px;
+    color: $background-black;
 }
