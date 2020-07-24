@@ -58,10 +58,15 @@ import { filter } from 'rxjs/operators';
         state('back-material', style({
           background: '#c4cccd'
         })),
-        transition('back-white => back-black', animate(200)),
-        transition('back-black => back-white', animate(200)),
-        transition('back-black => back-material', animate(200)),
-        transition('back-material => back-black', animate(200))
+        state('back-lite', style({
+          background: '#272424'
+        })),
+        transition('back-white => back-black', animate(500)),
+        transition('back-black => back-white', animate(500)),
+        transition('back-black => back-material', animate(500)),
+        transition('back-material => back-black', animate(500)),
+        transition('back-material => back-lite', animate(500)),
+        transition('back-lite => back-material', animate(500))
        ])
   ]
 })
@@ -79,6 +84,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
  
   ngOnInit() {
+    this.isMobile = this.width < this.mobileWidth;
     // you can subscribe to WOW observable to react when an element is revealed
     this.wowSubscription = this.wowService.itemRevealed$.subscribe(
       (item:HTMLElement) => {
@@ -91,7 +97,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.wowSubscription.unsubscribe();
   }
 
-
+  name = 'Angular';
+  isMobile: boolean = false;
+  width:number = window.innerWidth;
+  height:number = window.innerHeight;
+  mobileWidth:number  = 760;
   
   navbar = 'navbar-white';
   background = 'bwhite';
@@ -131,6 +141,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   animate_background_page2(){
     this.background_page = this.background_page == 'back-black' ? 'back-material' : 'back-black'
   }
+  animate_background_page3(){
+    this.background_page = this.background_page == 'back-material' ? 'back-lite' : 'back-material'
+  }
   lottieConfig: Object;
 
   
@@ -160,7 +173,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
     else if(number <= 1200 && this.background_page == "back-material"){
       this.animate_background_page2();
-
+    }
+    else if(number > 2200 && this.background_page == "back-material"){
+      this.animate_background_page3();
+    }
+    else if(number <= 2200 && this.background_page == "back-lite"){
+      this.animate_background_page3();
     }
    
   }
@@ -173,9 +191,19 @@ export class HomeComponent implements OnInit, OnDestroy {
   backgrounds: AnimationOptions = {
     path: '/assets/background2.json'
   };
+  network: AnimationOptions = {
+    path: '/assets/network.json'
+  };
   animationCreated(animationItem: AnimationItem): void {
     console.log(animationItem);
   }
+
+
+  onWindowResize(event) {
+    this.width = event.target.innerWidth;
+    this.height = event.target.innerHeight;
+    this.isMobile = this.width < this.mobileWidth;
+}
 }
 
 // 

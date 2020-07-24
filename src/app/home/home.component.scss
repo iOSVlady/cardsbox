@@ -3,8 +3,10 @@ $background-black: #272424;
 $background-matte: #585A56;
 $background-lite: #81A3A7;
 $background-lite2: #C2D3DA;
+/////////////////////////General///////////////////////////////
+
 * {
-    box-sizing: border-box;
+    
     margin: 0;
     padding: 0;
     color: $background-black;
@@ -16,9 +18,26 @@ body {
     line-height: 1.6;
     background: $background-white;
     color: $background-black;
+    
+      
+}
+.mask {
+    background: $background-white;
+}
+h1 {
+    background-color: $background-black;
+    color: $background-white;
+    display: inline;
+    font-weight: 700;
+    line-height: 1.6;
 }
 
-.name {
+h6 {
+    color: #454545;
+    line-height: 1.7;
+}
+
+.logo {
     font-size: 24px;
     font-weight: bold;
 }
@@ -33,10 +52,49 @@ body {
 .screen {
     height: 100vh;
     display: flex;
+    
 }
 
 .navbar-collapse {
-    margin: 20px;
+    margin-bottom: -15px;
+    margin-top: -15px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+
+@media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 930px;
+    }
+    .screen{
+        height: 110vh;
+        display: flex;
+    }
+    .mask {
+        padding: 5px;
+    }
+    .container {
+        padding: 10px;
+    }
+    .box {
+        margin-top: 40px;
+    }
+    .box2 {
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 600px;
+    }
 }
 
 @media (max-width: 740px) {
@@ -58,43 +116,23 @@ body {
 }
 
 @media (max-width: 740px) {
-    .col-md-6 {
-        margin-top: 11rem;
-    }
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    color: $background-black;
-}
-
-ul {
-    list-style: none;
-}
-
-.top-img {
-    width: 100%;
-    margin: 30px;
-    margin-top: 0;
-    // padding-top: 30px;
-}
-
-.general-img {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width: 740px) {
     img {
         margin: 0px;
     }
 }
+/////////////////////////General///////////////////////////////
 
+
+
+/////////////navbar////////////////////
+
+.network{
+    width: 100px;
+}
+/////////////navbar////////////////////
+
+
+/////////////////////////1 Pages///////////////////////////////
 .bttn {
     display: inline-block;
     background: $background-lite;
@@ -131,15 +169,8 @@ ul {
     color: $background-white;
 }
 
-.form-control {
-    display: block;
-    margin-top: 0.3rem;
-}
-
-.card {
-    padding: 1rem;
-    border: $background-black 1px dotted;
-    margin: 0.7rem 0;
+.image {
+    padding-top: 60px;
 }
 
 input,
@@ -165,86 +196,18 @@ hr {
     background-size: cover;
 }
 
-@media (max-width: 740px) {
-    html,
-    body,
-    header,
-    .view {
-        height: 930px;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 850px) {
-    html,
-    body,
-    header,
-    .view {
-        height: 600px;
-    }
-}
-
-.top-nav-collapse {
-    background-color: $background-white !important;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: $background-black;
-}
-
-.navbar:not(.top-nav-collapse) {
-    background: $background-white !important;
-    color: $background-black;
-}
-
-.navbar-myitems {
-    color: $background-black;
-}
-
-//border:rgba(255, 255, 255, 1) !important;
-@media (max-width: 991px) {
-    .navbar:not(.top-nav-collapse) {
-        background: $background-white !important;
-        padding: 0px 60px 0px 60px;
-    }
-}
-
-h1 {
-    background-color: $background-black;
-    color: $background-white;
-    display: inline;
-    font-weight: 700;
-    line-height: 1.6;
-}
 
 
-/* The typing effect */
 
-@keyframes typing {
-    from {
-        width: 0
-    }
-    to {
-        width: 100%
-    }
-}
+// @media (max-width: 991px) {
+   
+// }
+// @media (max-width: 740px) {
+// }
 
+/////////////////////////1 Pages///////////////////////////////
 
-/* The typewriter cursor effect */
-
-@keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent
-    }
-    50% {
-        border-color: orange;
-    }
-}
-
-h6 {
-    color: #454545;
-    line-height: 1.7;
-}
+/////////////////////////2 Pages///////////////////////////////
 
 .bg-dark {
     background-image: url("https://i.ibb.co/kh9Y1TS/Macket-Phone.png");
@@ -254,25 +217,6 @@ h6 {
     background-size: cover;
 }
 
-// .rgba-gradient {
-//   // background: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)  100% );
-// //  backdrop-filter:blur(5px) ;
-// }
-// Search
-.main {
-    background-color: $background-white;
-    position: relative;
-}
-
-.main-text {
-    color: $background-black;
-}
-
-.anki {
-    width: 30%;
-    margin: 10% 0% 10% 35%;
-}
-
 .col-text {
     border-radius: 10px;
     margin: 30px;
@@ -280,19 +224,12 @@ h6 {
     text-align: center;
 }
 
-.image {
-    padding-top: 60px;
-}
-
 .text-anki {
     margin: 10px;
     color: $background-white;
 }
 
-/////////////////////////2 Pages///////////////////////////////
-.animation-picture {
-    padding: 150px;
-}
+
 
 .picture {
     margin: auto;
@@ -319,7 +256,17 @@ h6 {
     }
 }
 
+/////////////////////////2 Pages///////////////////////////////
+
+
+/////////////////////////3 Pages///////////////////////////////
 .text-3 {
     padding-top: 140px;
     color: $background-black;
 }
+.text-redact {
+    padding-top: 100px;
+}
+
+
+/////////////////////////3 Pages///////////////////////////////

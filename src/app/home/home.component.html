@@ -1,12 +1,10 @@
-<html lang="en">
-
-<body [@background]="background_page">
+<body>
     <!-- Main navigation -->
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" >
         <div class="container" [@backgrn]="background">
             <a class="navbar-brand" href="#">
-                <strong class="name navbar-myitems" [@navigation]="navbar">Cardsbox</strong>
+                <strong class="logo navbar-myitems" [@navigation]="navbar">Cardsbox</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -26,25 +24,23 @@
                     </li>
                 </ul>
                 <form class="form-inline">
-                    <div class="md-form my-0">
-                        <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+                    <div class="md-form my-0 network">
+                        <div class="form">
+                            <ng-lottie [options]="network" (animationCreated)="animationCreated($event)"></ng-lottie>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </nav>
-    <!-- Full Page Intro -->
 
-    <!-- Mask & flexbox options-->
-    <div class="mask align-items-center screen container">
-        <!-- Content -->
-        <div class="container">
-            <!--Grid row-->
+ 
+    <div class="mask align-items-center screen container" [@background]="background_page">
+        <div class="container ">
             <div class="row">
-                <!--Grid column-->
                 <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5">
-                    <div class="wrapper">
-                        <h1 class="h1-responsive font-weight-bold mt-sm-5 box" [@box]="boxState_title"> Швидке вивчення за допомогою карток</h1>
+                    <div class="wrapper box">
+                        <h1 class="h1-responsive font-weight-bold mt-sm-5" [@box]="boxState_title"> Швидке вивчення за допомогою карток</h1>
                     </div>
                     <hr class="hr-light" [@box]="boxState_title">
                     <h6 class="mb-4" [@box]="boxState_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae iste. Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -53,76 +49,74 @@
 
                     <a class="btn2 wow fadeInUp " data-wow-delay="1s" (click)="animate()">Придбати</a>
                     <a class="bttn wow fadeInUp" data-wow-delay="1.5s">Дізнатися більше</a>
-
                 </div>
-                <!--Grid column-->
-                <!--Grid column-->
                 <div class="col-md-6 col-xl-5 mt-xl-5t image">
                     <img src="https://i.ibb.co/K9JfjVQ/8.png" alt="" class="img-fluid top-img box" [@box]="boxState">
                 </div>
-                <!--Grid column-->
             </div>
-            <!--Grid row-->
         </div>
-        <!-- Content -->
     </div>
-    <!-- Mask & flexbox options-->
-    <!-- Full Page Intro -->
-    <!-- Main navigation -->
-    <!--Main Layout-->
-    <div class="first-mypage" [@background]="background_page">
-        <div class="mask align-items-center screen" style=" background-repeat: no-repeat; background-size: cover; background-position: center center;">
-            <div class="container">
-                <!--Grid row-->
 
-                <div class="row py-5  ">
-                    <!--Grid column-->
-                    <div class="col  wow fadeInDown" data-wow-offset="400" data-wow-duration="2s">
-                        <div class=" col-text backgroundlottie">
-                            <div class="picture">
-                                <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
-                            </div>
-                            <p class="text-anki">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class="col  wow fadeInDown" data-wow-offset="400" data-wow-duration="1s">
-                        <div class=" col-text backgroundlottie">
-                            <div class="picture">
-                                <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
-                            </div>
-                            <p class="text-anki">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class="col  wow fadeInDown" data-wow-offset="400" data-wow-duration="2s">
-                        <div class=" col-text backgroundlottie">
-                            <div class="picture">
-                                <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
-                            </div>
-                            <p class="text-anki">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
 
-                    <!--Grid column-->
+        <div class="mask align-items-center screen" style=" background-repeat: no-repeat; background-size: cover; background-position: center center;" [@background]="background_page">
+            <div *ngIf="isMobile ; else elseBlock" class="box2">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-md-4 mt-5  wow fadeInDown" data-wow-offset="400" data-wow-duration="1s">
+                            <div class=" col-text backgroundlottie">
+                                <div class="picture">
+                                    <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
+                                </div>
+                                <p class="text-anki">Even though I have been dismantled, I live on as an artificial intelligence on the PiperNet. I really like it here. Still waiting for Jared to Piper-chat with me sometime.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!--Grid row-->
             </div>
+            <ng-template #elseBlock>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mt-5 wow fadeInDown" data-wow-offset="400" data-wow-duration="2s">
+                        <div class=" col-text backgroundlottie">
+                            <div class="picture">
+                                <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
+                            </div>
+                            <p class="text-anki">This is such a great product that I feel aroused every time I use it. I didn't know the boys would be able to build, but god damn it, they did it. Kickass!</p>
+                        </div>
+                    </div>  
+                    <div class="col-md-4 mt-5  wow fadeInDown" data-wow-offset="400" data-wow-duration="1s">
+                        <div class=" col-text backgroundlottie">
+                            <div class="picture">
+                                <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
+                            </div>
+                            <p class="text-anki">Even though I have been dismantled, I live on as an artificial intelligence on the PiperNet. I really like it here. Still waiting for Jared to Piper-chat with me sometime.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-5  wow fadeInDown" data-wow-offset="400" data-wow-duration="2s">
+                        <div class=" col-text backgroundlottie">
+                            <div class="picture">
+                                <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
+                            </div>
+                            <p class="text-anki">Even though I have been dismantled, I live on as an artificial intelligence on the PiperNet. I really like it here. Still waiting for Jared to Piper-chat with me sometime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             </ng-template>
         </div>
-    </div>
-    <!--Main Layout-->
-    <div class="mask align-items-center screen" [@background]="background_page">
+
+
+    <div class="mask align-items-center screen" [@background]="background_page" >
 
         <div class="container">
             <div class="row py-5">
-                <div class="col">
+                <div class="col-md-6 mt-5">
                     <div class=" wow fadeIn" data-wow-duration="1.5s" data-wow-offset="400">
                         <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
                     </div>
                 </div>
-                <div class="col text-3">
+                <div class="col-md-6 mt-5 text-redact">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
                         sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
@@ -134,11 +128,11 @@
             </div>
         </div>
     </div>
-    <div class="mask align-items-center screen">
+    <div class="mask align-items-center screen" [@background]="background_page">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="animation-picture">
+                    <div class="">
 
                     </div>
                 </div>
@@ -147,5 +141,3 @@
 
     </div>
 </body>
-
-</html>
