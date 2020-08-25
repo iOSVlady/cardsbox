@@ -22,12 +22,10 @@ export class LoadingSpinnerComponent implements OnInit {
     }
 
   ngOnInit(): void {    
-     const intervalStream$ = interval(3000)
-    this.sub = intervalStream$
-    .subscribe(() => {
-      this.showSpinner = false
-      this.router.navigate(['home'])
-    })}
+    setTimeout(() => {
+      this.router.navigate(['/home']);
+    }, 3000)
+  }
 
     options: AnimationOptions = {
       path: '/assets/SmartPhone.json',
