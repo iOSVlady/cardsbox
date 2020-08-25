@@ -78,7 +78,7 @@ export class GeneralComponent implements OnInit, OnDestroy {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
       // Reload WoW animations when done navigating to page,
       // but you are free to call it whenever/wherever you like
-      this.wowService.init(); 
+      
     });
   
   }
