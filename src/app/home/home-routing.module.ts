@@ -13,16 +13,12 @@ const userRoutes: Routes = [
     component: HomeComponent,
     children:[
       {
-        path: 'home',
+        path: '',
         component: GeneralComponent
       },
       {
         path: 'payment',
         component: PaymentComponent
-      },
-      {
-        path: '',
-        redirectTo: 'home', pathMatch: 'full'
       }
     ]
     
