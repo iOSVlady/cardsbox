@@ -9,7 +9,6 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
 import { AppRoutingModule } from './app-routing.module';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
-import { PaymentComponent } from './payment/payment.component';
 
 
 export function playerFactory() {

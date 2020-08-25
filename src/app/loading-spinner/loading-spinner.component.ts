@@ -14,7 +14,15 @@ export class LoadingSpinnerComponent implements OnInit {
   loader: Array<any[]>;
   showSpinner: boolean = true;
   constructor(public router: Router) {  
-    const intervalStream$ = interval(3000)
+   
+    }
+  
+    animationCreated(animationItem: AnimationItem): void {
+      console.log(animationItem);
+    }
+
+  ngOnInit(): void {    
+     const intervalStream$ = interval(3000)
     this.sub = intervalStream$
     .subscribe(() => {
       this.showSpinner = false
@@ -23,13 +31,6 @@ export class LoadingSpinnerComponent implements OnInit {
 
     options: AnimationOptions = {
       path: '/assets/SmartPhone.json',
-    };
-  
-    animationCreated(animationItem: AnimationItem): void {
-      console.log(animationItem);
-    }
-
-  ngOnInit(): void {    
   }
 
 }

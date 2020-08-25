@@ -3,8 +3,8 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" >
         <div class="container" [@backgrn]="background">
-            <a class="navbar-brand" href="#">
-                <strong class="logo navbar-myitems" [@navigation]="navbar">Cardsbox</strong>
+            <a class="navbar-brand" routerLink="/home/home">
+                <strong class="logo navbar-myitems" [@navigation]="navbar" >Cardsbox</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -12,15 +12,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                 <ul class="navbar-nav mr-auto ">
                     <li class="nav-item active">
-                        <a class="nav-link" [@navigation]="navbar" href="#">Про нас
+                        <a class="nav-link" [@navigation]="navbar" routerLink="/home/home">Про нас
                 <span class="sr-only">(current)</span>
               </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" [@navigation]="navbar" href="#">Інструкція</a>
+                        <a class="nav-link" [@navigation]="navbar" routerLink="/home/home">Інструкція</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" [@navigation]="navbar" href="#">Поділитися</a>
+                        <a class="nav-link" [@navigation]="navbar" routerLink="/home/home">Поділитися</a>
                     </li>
                 </ul>
                 <form class="form-inline">
@@ -34,110 +34,6 @@
         </div>
     </nav>
 
- 
-    <div class="mask align-items-center screen container" [@background]="background_page">
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5">
-                    <div class="wrapper box">
-                        <h1 class="h1-responsive font-weight-bold mt-sm-5" [@box]="boxState_title"> Швидке вивчення за допомогою карток</h1>
-                    </div>
-                    <hr class="hr-light" [@box]="boxState_title">
-                    <h6 class="mb-4" [@box]="boxState_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae iste. Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae iste.
-                    </h6>
+    <router-outlet></router-outlet>
 
-                    <a routerLink="/payment" class="btn2 wow fadeInUp " data-wow-delay="1s" (click)="animate()" >Придбати</a>
-                    <a class="bttn wow fadeInUp" data-wow-delay="1.5s">Дізнатися більше</a>
-                </div>
-                <div class="col-md-6 col-xl-5 mt-xl-5t image">
-                    <img src="https://i.ibb.co/K9JfjVQ/8.png" alt="" class="img-fluid top-img box" [@box]="boxState">
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-        <div class="mask align-items-center screen" style=" background-repeat: no-repeat; background-size: cover; background-position: center center;" [@background]="background_page">
-            <div *ngIf="isMobile ; else elseBlock" class="box2">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-4 mt-5  wow fadeInDown" data-wow-offset="400" data-wow-duration="1s">
-                            <div class=" col-text backgroundlottie">
-                                <div class="picture">
-                                    <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
-                                </div>
-                                <p class="text-anki">Even though I have been dismantled, I live on as an artificial intelligence on the PiperNet. I really like it here. Still waiting for Jared to Piper-chat with me sometime.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ng-template #elseBlock>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mt-5 wow fadeInDown" data-wow-offset="400" data-wow-duration="2s">
-                        <div class=" col-text backgroundlottie">
-                            <div class="picture">
-                                <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
-                            </div>
-                            <p class="text-anki">This is such a great product that I feel aroused every time I use it. I didn't know the boys would be able to build, but god damn it, they did it. Kickass!</p>
-                        </div>
-                    </div>  
-                    <div class="col-md-4 mt-5  wow fadeInDown" data-wow-offset="400" data-wow-duration="1s">
-                        <div class=" col-text backgroundlottie">
-                            <div class="picture">
-                                <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
-                            </div>
-                            <p class="text-anki">Even though I have been dismantled, I live on as an artificial intelligence on the PiperNet. I really like it here. Still waiting for Jared to Piper-chat with me sometime.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mt-5  wow fadeInDown" data-wow-offset="400" data-wow-duration="2s">
-                        <div class=" col-text backgroundlottie">
-                            <div class="picture">
-                                <ng-lottie [options]="cards" (animationCreated)="animationCreated($event)"></ng-lottie>
-                            </div>
-                            <p class="text-anki">Even though I have been dismantled, I live on as an artificial intelligence on the PiperNet. I really like it here. Still waiting for Jared to Piper-chat with me sometime.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             </ng-template>
-        </div>
-
-
-    <div class="mask align-items-center screen" [@background]="background_page" >
-
-        <div class="container">
-            <div class="row py-5">
-                <div class="col-md-6 mt-5">
-                    <div class=" wow fadeIn" data-wow-duration="1.5s" data-wow-offset="400">
-                        <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-5 text-redact">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
-                        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mask align-items-center screen" [@background]="background_page">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
 </body>

@@ -6,6 +6,9 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { NgwWowModule } from 'ngx-wow';
 
+import { PaymentComponent } from './payment/payment.component';
+import { GeneralComponent } from './general/general.component';
+
 export function playerFactory() {
   return player;
 }
@@ -20,9 +23,13 @@ export function playerFactory() {
     HomeComponent
   ],
   declarations: [
-    HomeComponent
+    HomeComponent,
+    GeneralComponent,
+    PaymentComponent
+
   ],
-  providers: []
+  providers: [],
+  bootstrap: [HomeComponent]
 })
 export class HomeModule {
   constructor() {
