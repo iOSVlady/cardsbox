@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
+import { ShopComponent } from './shop/shop.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { NgwWowModule } from 'ngx-wow';
+import {PaymentRequestModule} from '@ng-web-apis/payment-request';
 
 import { PaymentComponent } from './payment/payment.component';
 import { GeneralComponent } from './general/general.component';
@@ -17,7 +19,8 @@ export function playerFactory() {
     CommonModule,
     HomeRoutingModule,
     LottieModule.forRoot({ player: playerFactory }),
-    NgwWowModule
+    NgwWowModule,
+    // PaymentRequestModule
   ],
   exports:[
     HomeComponent
@@ -25,7 +28,8 @@ export function playerFactory() {
   declarations: [
     HomeComponent,
     GeneralComponent,
-    PaymentComponent
+    PaymentComponent,
+    ShopComponent
 
   ],
   providers: [],
