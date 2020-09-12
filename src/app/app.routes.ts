@@ -11,7 +11,7 @@ import { GeneralComponent } from './home/general/general.component';
 const routes: Routes = [
   {
     path: '',
-    component: LoadingSpinnerComponent,
+    component: PaymentComponent,
   },
   {
     path: 'home',
