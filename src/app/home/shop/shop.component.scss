@@ -1,80 +1,81 @@
-
 .items {
-    padding-left: 100px;
-    display: flexbox;
-
+  padding-left: 100px;
+  display: flexbox;
 }
 
 @media (max-width: 800px) {
-    .items {
-        max-width: 50%;
-        justify-content: flex-end;
-    }
+  .items {
+    max-width: 50%;
+    justify-content: flex-end;
+  }
 }
 
 .item {
-    width: 150px;
-    margin: 12px;
-    padding: 16px 16px 0 16px;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid gainsboro;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: box-shadow 0.3s;
+  width: 150px;
+  margin: 12px;
+  padding: 16px 16px 0 16px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
 
-    &:hover {
-        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
-    }
+  &:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .item-label {
-    cursor: inherit;
+  cursor: inherit;
 }
 
 .item-price {
-    font-size: smaller;
+  font-size: smaller;
 }
 
 .item-image {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .sticky {
-    position: sticky;
-    top: 16px;
+  position: sticky;
+  top: 16px;
 }
 
 .total {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 .shopping-card-item {
-    margin-top: 4px;
-    margin-bottom: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .shopping-cart {
-   
-    max-width: 168px;
-    background-color: rgb(240, 240, 240);
-    padding: 0 16px;
-    border-radius: 8px;
+  max-width: 168px;
+  background-color: rgb(240, 240, 240);
+  padding: 0 16px;
+  border-radius: 8px;
 }
 
 .buy-button {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 8px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 4px;
-    cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
 
-    &:disabled {
-        cursor: default;
-        opacity: 0.56;
-    }
+  &:disabled {
+    cursor: default;
+    opacity: 0.56;
+  }
+}
+input {
+  border: none;
+  background-color: #fff;
 }

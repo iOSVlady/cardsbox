@@ -1,49 +1,65 @@
 <div class="row py-5">
-<div class="items col-10">
-    <div *ngFor="let item of items" class="item" (click)="addToShippintCard(item)">
-        <img class="item-image" width="64" [src]="item.image" />
-        <label class="item-label">
-            {{ item.label }}
-        </label>
-        <p class="item-price">{{ item.price }} ₽</p>
+  <div class="items col-10">
+    <div
+      *ngFor="let item of items"
+      class="item"
+      (click)="addToShippintCard(item)"
+    >
+      <img class="item-image" width="64" [src]="item.image" />
+      <label class="item-label">
+        {{ item.label }}
+      </label>
+      <p class="item-price">{{ item.price }} ₽</p>
     </div>
-</div>
+  </div>
 
-<div class="shopping-cart col" >
+  <div class="shopping-cart col">
     <div class="sticky">
-        <h4>
-            Shopping Cart
-        </h4>
+      <h4>Shopping Cart</h4>
 
-        <ng-container *ngIf="shippingCart.length > 0; else noItems">
-            <div
-                *ngFor="let cartItem of shippingCart"
-                waPaymentItem
-                class="shopping-card-item"
-                [paymentLabel]="cartItem.label"
-                [paymentAmount]="cartItem.amount"
-            >
-                {{ cartItem.label }} ({{ cartItem.amount.value }}
-                {{ cartItem.amount.currency }})
-            </div>
-        </ng-container>
-        <ng-template #noItems>
-            Nothing added
-        </ng-template>
-
-        <div class="total">
-            <b>Total:</b>
-            {{ totalSum }} ₽
-        </div>
-
-        <button
-            class="buy-button"
-            [disabled]="shippingCart.length === 0"
-            (waPaymentSubmit)="onPayment($event)"
-            (waPaymentError)="onPaymentError($event)"
+      <ng-container *ngIf="shippingCart.length > 0; else noItems">
+        <div
+          *ngFor="let cartItem of shippingCart"
+          waPaymentItem
+          class="shopping-card-item"
+          [paymentLabel]="cartItem.label"
+          [paymentAmount]="cartItem.amount"
         >
-            Buy
-        </button>
+          {{ cartItem.label }} ({{ cartItem.amount.value }}
+          {{ cartItem.amount.currency }})
+        </div>
+      </ng-container>
+      <ng-template #noItems> Nothing added </ng-template>
+
+      <div class="total">
+        <b>Total:</b>
+        {{ totalSum }} UAH
+      </div>
+
+      <button
+        class="buy-button"
+        [disabled]="shippingCart.length === 0"
+        (waPaymentSubmit)="onPayment($event)"
+        (waPaymentError)="onPaymentError($event)"
+      >
+        <form
+          name="payment"
+          method="post"
+          action="https://sci.interkassa.com/"
+          accept-charset="UTF-8"
+        >
+          <input
+            type="hidden"
+            name="ik_co_id"
+            value="51237daa8f2a2d8413000000"
+          />
+          <input type="hidden" name="ik_pm_no" value="ID_4233" />
+          <input type="hidden" name="ik_am" value="{{ totalSum }}" />
+          <input type="hidden" name="ik_cur" value="uah" />
+          <input type="hidden" name="ik_desc" value="Payment Description" />
+          <input type="submit" value="Buy" />
+        </form>
+      </button>
     </div>
-</div>
+  </div>
 </div>
