@@ -1,0 +1,22 @@
+$background-white: #f1f3f2;
+$background-black: #242726;
+$background-matte: #585a56;
+$background-lite: #81a3a7;
+$background-lite2: #c2d3da;
+
+.footerName {
+  font-weight: bold;
+  color: $background-white;
+  //   text-align: center;
+}
+.page-footer {
+  background-color: $background-black;
+  color: $background-white;
+}
+.text-uppercase {
+  color: $background-white;
+  font-weight: bold;
+}
+.text-footer {
+  color: $background-white;
+}
